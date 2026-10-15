@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,16 +16,21 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Int64 } from '@stdlib/types/number';
 
 /**
-* Test whether two 64-bit signed integers are equal.
+* Tests whether two 64-bit signed integers are equal.
 *
-* @module @stdlib/number-int64-base-assert-is-equal
+* @param a - first 64-bit signed integer
+* @param b - second 64-bit signed integer
+* @returns boolean indicating if both 64-bit signed integers are equal
 *
 * @example
 * var Int64 = require( '@stdlib/number-int64-ctor' );
-* var isEqual = require( '@stdlib/number-int64-base-assert-is-equal' );
 *
 * var a = new Int64( 1234 );
 * var b = Int64.of( 0, 1234 );
@@ -33,12 +38,9 @@
 * var v = isEqual( a, b );
 * // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function isEqual( a: Int64, b: Int64 ): boolean;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = isEqual;
